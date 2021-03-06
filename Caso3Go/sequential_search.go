@@ -9,7 +9,7 @@ func sequentialSearch(num1 int) {
 	start := time.Now()
 
 	rand.Seed(time.Now().Unix())
-	var rngArray []int = rand.Perm(100000)
+	var rngArray []int = rand.Perm(10000000)
 	var state bool = false
 
 	for i := range rngArray {
@@ -30,7 +30,7 @@ func sequentialSearch(num1 int) {
 }
 
 func main() {
-	var num1 int = 5418
+	var num1 int = -1
 
 	sequentialSearch(num1)
 }
