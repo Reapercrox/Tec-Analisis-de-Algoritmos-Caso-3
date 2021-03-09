@@ -7,12 +7,18 @@ fn main() -> () {
     let now = Instant::now();
 
     let num1: u64 = 0;//Los numeros son de tipo primitivo de rust u64, se define 0 siendo este numero no parte de la lista, asi se evalua el peor caso
-    print! ("Se va a buscar el numero: ");
+    print! ("\nSe va a buscar el numero: ");
     println! ("{}",num1);
 
     let mut random = rand::thread_rng();
 
-    let vals:  Vec<u64> = (1..10000000).map(|_|random.gen_range(1..10000000)).collect(); // Se encarga de crear un arreglo/vector compuesto de numeros randomizados
+    let CANTIDAD = 10000000;
+
+    let vals:  Vec<u64> = (1..CANTIDAD).map(|_|random.gen_range(1..CANTIDAD)).collect(); // Se encarga de crear un arreglo/vector compuesto de numeros randomizados
+
+    print!("Se va a buscar entre ");
+    print!("{}",CANTIDAD);
+    println!(" numeros");
 
     let mut state = false;
 
@@ -31,5 +37,7 @@ fn main() -> () {
 
     print!("El tiempo de ejecucion es de: ");
     println!("{}", now.elapsed().as_nanos());
+
+    println!("");
 
 }

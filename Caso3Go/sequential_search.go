@@ -5,13 +5,19 @@ import (
 	"time"
 )
 
+var CANTIDAD int = 10000000
+
 //Algoritmo principal
 //Se encarga de realizar una busqueda secuencial en un arreglo semi randomizado, no ordenado
 func sequentialSearch(num1 int) {
 	start := time.Now()
 
+	print("\nSe va a buscar entre ")
+	print("", CANTIDAD)
+	println(" numeros")
+
 	rand.Seed(time.Now().Unix())
-	var rngArray []int = rand.Perm(10000000) // Se encarga de crear y cargar el array con numeros, de una manera semi randomizada partiendo de una permutacion
+	var rngArray []int = rand.Perm(CANTIDAD) // Se encarga de crear y cargar el array con numeros, de una manera semi randomizada partiendo de una permutacion
 	var state bool = false
 
 	for i := range rngArray {
@@ -29,6 +35,7 @@ func sequentialSearch(num1 int) {
 	duration := time.Since(start)
 
 	println("El tiempo de ejecucion es de: ", duration.Nanoseconds())
+	println("")
 }
 
 func main() {
