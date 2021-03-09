@@ -38,7 +38,7 @@ void busqueda(int pBuscado){
 	bool estado = false;
 
 	for(i=0; i<CANTIDAD;i++){
-		if(pNumArray[i] == -1){					//Se busca el numero de manera que se de el peor caso siempre
+		if(numArray[i] == -1){					//Se busca el numero de manera que se de el peor caso siempre
 			estado = true;
 		}
 	}
