@@ -5,11 +5,13 @@ import (
 	"time"
 )
 
+//Algoritmo principal
+//Se encarga de realizar una busqueda secuencial en un arreglo semi randomizado, no ordenado
 func sequentialSearch(num1 int) {
 	start := time.Now()
 
 	rand.Seed(time.Now().Unix())
-	var rngArray []int = rand.Perm(10000000)
+	var rngArray []int = rand.Perm(10000000) // Se encarga de crear y cargar el array con numeros, de una manera semi randomizada partiendo de una permutacion
 	var state bool = false
 
 	for i := range rngArray {
