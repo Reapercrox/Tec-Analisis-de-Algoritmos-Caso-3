@@ -26,13 +26,14 @@ int main(){
 	printf("El programa se ejecuto en: %f nanosegundos\n",seconds);
 }
 
-
+//Funcion principal
+//Se encarga de realizar una busqueda secuencial en un arreglo randomizado
 void busqueda(long pNumArray[]){
 	int i;
 	bool estado = false;
 
 	for(i=0; i<CANTIDAD;i++){
-		if(pNumArray[i] == -1){
+		if(pNumArray[i] == -1){//Se busca el -1 de manera que se de el peor caso siempre
 			estado = true;
 		}
 	}
