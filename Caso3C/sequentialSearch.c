@@ -15,8 +15,11 @@ int main(){
 	int* pointerDir2 = &numBuscado;
     int i;
 	double seconds;
+
+	srand(time(0));
+
     for(i = 0; i<CANTIDAD;i++){
-    	numArray[i] = 123;						// Se inserta solo el mismo numero positivo
+    	numArray[i] = rand();						// Se inserta solo el mismo numero positivo
 	}
 
 	clock_t tInicio = clock();					// Marca inicio del tiempo
