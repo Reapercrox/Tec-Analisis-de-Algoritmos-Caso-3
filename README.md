@@ -74,7 +74,7 @@ Por lo tanto se puede demostrar que en tiempo de ejecucion ambos idiomas tienen 
 Para demostrar la diferencia en tiempo utilizaremos la siguiente tabla
 
 | Cantidad de Elementos  | Lenguaje |  Tiempo(nanosegundos) |
-| :------------ |:---------------:| -----:| ---------:|
+| :------------ |:---------------:| -----:|
 |    1 000 000     | C             |   1 600 000  |
 |                 | C++        |    2 000 000  |
 |                 | Rust       |    795 968 800  |
