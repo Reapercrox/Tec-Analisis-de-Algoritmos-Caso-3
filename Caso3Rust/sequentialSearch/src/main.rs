@@ -12,7 +12,7 @@ fn main() -> () {
 
     let mut random = rand::thread_rng();
 
-    let CANTIDAD = 10000000;
+    let CANTIDAD = 50000000;
 
     let vals:  Vec<u64> = (1..CANTIDAD).map(|_|random.gen_range(1..CANTIDAD)).collect(); // Se encarga de crear un arreglo/vector compuesto de numeros randomizados
 

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var CANTIDAD int = 10000000
+var CANTIDAD int = 50000000
 
 //Algoritmo principal
 //Se encarga de realizar una busqueda secuencial en un arreglo semi randomizado, no ordenado

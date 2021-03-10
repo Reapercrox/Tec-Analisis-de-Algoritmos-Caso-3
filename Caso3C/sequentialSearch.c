@@ -4,15 +4,15 @@
 #include <time.h>
 #include <stdbool.h>
 
-#define CANTIDAD 200
-static int numArray[CANTIDAD];
+#define CANTIDAD 50000000
 const int numBuscado = -1;
+int numArray[CANTIDAD];
 
 void busqueda(int pBuscado);
 
 int main(){
-	int* pointerDir1 = &numArray;
-	int* pointerDir2 = &numBuscado;
+	int* pointerDir1 = &numBuscado;
+	const int* pointerDir2 = &numArray[CANTIDAD-1];
     int i;
 	double seconds;
 
@@ -27,7 +27,7 @@ int main(){
 	clock_t tFinal = clock();					// Marca final del tiempo
 
 	seconds = (double)(tFinal - tInicio)*1000000000 / CLOCKS_PER_SEC;
-	int memory = pointerDir1 - pointerDir2;
+	int memory = pointerDir2 - pointerDir1;
 
 	printf("Ejemplo de busqueda secuencial con %d elementos\n",CANTIDAD);
 	printf("El programa se ejecuto en: %f nanosegundos\n",seconds);
